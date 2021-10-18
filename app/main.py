@@ -1,5 +1,9 @@
 from flask import Flask
+# from guesslang import Guess
+
+# guess = Guess()
+
 app= Flask(__name__)
-@app.route('/')
-def index():
-  return "<h1>Welcome to CodingX</h1>"
+@app.route('/<code>')
+def infer(code):
+  return code
